@@ -1,0 +1,1 @@
+# starterkit-getty-asset-source-ts-web
