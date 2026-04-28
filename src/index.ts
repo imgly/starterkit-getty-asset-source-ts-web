@@ -56,9 +56,7 @@ CreativeEditorSDK.create('#cesdk_container', config)
 
     // Load the Getty Images demo scene from CDN
     // This scene showcases images that can be replaced with photos from Getty Images
-    await cesdk.loadFromURL(
-      resolveAssetPath('/assets/getty-images.scene')
-    );
+    await cesdk.loadFromURL(resolveAssetPath('/assets/getty-images.scene'));
   })
   .catch((error) => {
     // eslint-disable-next-line no-console
