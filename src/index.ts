@@ -22,7 +22,7 @@
  * });
  * ```
  *
- * @see https://img.ly/docs/cesdk/js/get-started/overview-e18f40/
+ * @see https://img.ly/docs/cesdk/js/getting-started/
  * @see https://developer.gettyimages.com/
  */
 
@@ -30,7 +30,6 @@ import CreativeEditorSDK from '@cesdk/cesdk-js';
 
 import { initGettyImagesEditor } from './imgly';
 import { resolveAssetPath } from './imgly/resolveAssetPath';
-
 
 // ============================================================================
 // Configuration
@@ -79,7 +78,7 @@ CreativeEditorSDK.create('#cesdk_container', config)
 
     // Load the Getty Images demo scene from CDN
     // This scene showcases images that can be replaced with photos from Getty Images
-    await cesdk.load(resolveAssetPath('/assets/getty-images.scene'));
+    await cesdk.loadFromURL(resolveAssetPath('/assets/getty-images.scene'));
   })
   .catch((error) => {
     // eslint-disable-next-line no-console
