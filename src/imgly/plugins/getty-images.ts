@@ -70,7 +70,13 @@ let hasShownProxyUrlWarning = false;
  * @param proxyUrl - The Getty Images API proxy URL
  * @returns AssetSource configuration for CE.SDK
  */
-export function createGettyImagesAssetSource(proxyUrl: string): AssetSource {
+/**
+ * Create a Getty Images asset source with the given proxy URL.
+ *
+ * @param proxyUrl - The Getty Images API proxy URL
+ * @returns AssetSource configuration for CE.SDK
+ */
+function createGettyImagesAssetSource(proxyUrl: string): AssetSource {
   /**
    * Find Getty Images assets based on query parameters.
    */
@@ -228,9 +234,8 @@ export class GettyImagesAssetSourcePlugin implements EditorPlugin {
     });
 
     // Configure dock to show Getty Images instead of default images
-    const currentDockOrder = cesdk.ui.getComponentOrder({ in: 'ly.img.dock' });
-    cesdk.ui.setComponentOrder(
-      { in: 'ly.img.dock' },
+    const currentDockOrder = cesdk.ui.getDockOrder();
+    cesdk.ui.setDockOrder(
       currentDockOrder.map((component) => {
         // Replace the default image dock entry with Getty Images
         if (component.key === 'ly.img.image') {
