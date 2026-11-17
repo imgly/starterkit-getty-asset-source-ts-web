@@ -211,19 +211,6 @@ export function setupSettings(engine: CreativeEngine): void {
   // #endregion
 
   // ============================================================================
-  // DOCK SETTINGS
-  // Configure the asset dock appearance
-  // ============================================================================
-
-  // #region Dock Settings
-  // Hide text labels on dock icons (icon-only mode)
-  // engine.editor.setSetting('dock/hideLabels', false);
-
-  // Dock icon size: 'normal' or 'large'
-  // engine.editor.setSetting('dock/iconSize', 'large');
-  // #endregion
-
-  // ============================================================================
   // FEATURE FLAGS
   // Enable/disable specific engine capabilities
   // ============================================================================
@@ -240,20 +227,6 @@ export function setupSettings(engine: CreativeEngine): void {
 
   // Retain cover mode during transform edits
   // engine.editor.setSetting('features/transformEditsRetainCoverMode', true);
-  // #endregion
-
-  // ============================================================================
-  // COLOR PICKER SETTINGS
-  // Configure color picker behavior
-  // ============================================================================
-
-  // #region Color Picker Settings
-  // Restrict color picker to a specific color mode:
-  // - 'Any': Allow both RGB and CMYK (default)
-  // - 'RGB': Restrict to RGB colors only
-  // - 'CMYK': Restrict to CMYK colors only
-  // NOTE: This setting may not be available in all CE.SDK versions
-  // engine.editor.setSetting('colorPicker/colorMode', 'Any');
   // #endregion
 
   // ============================================================================
