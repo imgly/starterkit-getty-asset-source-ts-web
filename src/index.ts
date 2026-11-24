@@ -51,7 +51,7 @@ const config = {
 
 // Option 1: Read from environment variables (recommended for new projects with .env)
 const gettyConfig = {
-  gettyProxyUrl: (undefined as string | undefined) as
+  gettyProxyUrl: import.meta.env.VITE_GETTY_IMAGES_PROXY_URL as
     | string
     | undefined
 };
